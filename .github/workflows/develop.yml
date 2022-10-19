@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Build
+      - name: install
         run: yarn install
       - name: Build
         run: yarn build
