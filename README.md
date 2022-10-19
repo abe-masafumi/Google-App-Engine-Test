@@ -36,12 +36,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 # GCP Google App Engine デプロイ方法
 
-日付:2022/10/18
+- 日付:2022/10/18
 
-Google App Engineへのデプロイテスト
+- Google App Engineへのデプロイテスト
 
-目的:next.jsで作成した[飼い主検定]を無料枠で公開したい
-
+- 目的:next.jsで作成した[飼い主検定]を無料枠で公開したい
 
 [GCP](https://console.cloud.google.com/)
 
@@ -63,12 +62,18 @@ Google App Engineへのデプロイテスト
 
 [コスト管理の自動レスポンスの例](https://cloud.google.com/appengine/docs/flexible/nodejs/testing-and-deploying-your-app?hl=ja)
 
-デプロイせずにテストurlを作成するコマンド
+
+## デプロイせずにテストurlを作成するコマンド
+
 ```bush
 gcloud app deploy --no-promote
 ```
 
-Google CLIの設定時(ターミナル)
+
+## -作業の様子-
+
+- Google CLIの設定時(ターミナル)
+
 ```txt
 Welcome to the Google Cloud CLI!
 
@@ -110,7 +115,7 @@ For more information on how to get started, please visit:
 ```
 
 
-gcloudとプロジェクトの紐付け
+- gcloudとプロジェクトの紐付け
 ```
 Welcome! This command will take you through the configuration of gcloud.
 
@@ -160,7 +165,7 @@ Some things to try next:
 ```
 
 
-"app.yml"ファイルがなかった時のエラー
+- "app.yml"ファイルがなかった時のエラー
 ```
 910
 ERROR: (gcloud.app.create) The project [gcloud-test-365910] already contains an App Engine application in region [asia-northeast2].  You can deploy your application using `gcloud app deploy`.
@@ -172,9 +177,10 @@ ERROR: (gcloud.app.deploy) [/Users/masa/Desktop/gcloud_test] could not be identi
  [2] Create a new configuration
 ```
 
-"yml"ファイルの"runtime"がおかしい時
+- "yml"ファイルの"runtime"がおかしい時
 
-これは"runtime"だけじゃなくて"ymlファイル"全体を見た方がいい
+ これは"runtime"だけじゃなくて"ymlファイル"全体を見た方がいい
+
 ```
 Do you want to continue (Y/n)?  Y
 
@@ -187,14 +193,14 @@ File upload done.
 ERROR: (gcloud.app.deploy) INVALID_ARGUMENT: Invalid runtime 'nodejs' specified. Accepted runtimes are: [php, php55, python27, java, java7, java8, gcf preprod, gcf prod, gcf staging, go111, go112, go113, go114, go115, java11, java8 canary, nodejs10, nodejs12, nodejs14, php72, php73, php74, php55 canary, python37, python38, python39, ruby25, ruby26, ruby27]
 ```
 
-GCPで"Cloud Build"が設定されていない可能性あり
+- GCPで"Cloud Build"が設定されていない可能性あり
 
 これは"ymlファイル"の設定が悪い可能性あり
 ```
 ERROR: (gcloud.app.deploy) Error Response: [7] Access Not Configured. Cloud Build has not been used in project gcloud-test-365910 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudbuild.googleapis.com/overview?project=gcloud-test-365910 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
 ```
 
-これは"ymlファイル"の設定が悪い可能性あり
+- これは"ymlファイル"の設定が悪い可能性あり
 ```
 ERROR: (gcloud.app.deploy) INVALID_ARGUMENT: Instance class (F1) is only allowed with the automatic scaling value.
 - '@type': type.googleapis.com/google.rpc.BadRequest
@@ -204,8 +210,8 @@ ERROR: (gcloud.app.deploy) INVALID_ARGUMENT: Instance class (F1) is only allowed
 ```
 
 
-ブラウザが"402 Bad Geteway"の場合
+## ブラウザが"402 Bad Geteway"の場合
 
-"GCP"の"App Engine"のページでエラーログがあるので参考にするといいかも
+- "GCP"の"App Engine"のページでエラーログがあるので参考にするといいかも
 
-ローカル環境で初回buildができていない可能性があるのでbuildしてください
+- ローカル環境で初回buildができていない可能性があるのでbuildしてください
