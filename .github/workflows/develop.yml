@@ -1,9 +1,6 @@
 name: make_develop
 on: 
   pull_request:
-    types:
-       - opened
-       - checks_requested
     branches: 
       - develop
 
