@@ -26,6 +26,3 @@ jobs:
           deliverables: app.yaml
           credentials: ${{ secrets.GCP_SA_KEY }}
           version: v1
-
-      - id: 'test'
-        run: 'curl "${{ steps.deploy.outputs.url }}"'
