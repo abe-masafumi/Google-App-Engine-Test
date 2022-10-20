@@ -6,7 +6,10 @@ on:
     types:
       - opened
 jobs:
-  deplay-staging:
+  job_id:
+    steps:
+    - id: 'deploy'
+      uses: 'google-github-actions/deploy-appengine@v0'
     - name: 'Setup Cloud SDK'
       uses: 'google-github-actions/setup-gcloud@v0'
       with:
@@ -15,3 +18,6 @@ jobs:
 
     - name: 'Deploy to App Engine'
       run: 'gcloud app deploy app.yaml --quiet --no-promote --version v1'
+
+    - id: 'test'
+      run: 'curl "${{ steps.deploy.outputs.url }}"'
