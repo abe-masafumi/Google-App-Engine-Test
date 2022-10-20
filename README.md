@@ -36,6 +36,11 @@ npm run dev
 
 [コスト管理の自動レスポンスの例](https://cloud.google.com/appengine/docs/flexible/nodejs/testing-and-deploying-your-app?hl=ja)
 
+## デプロイコマンド
+```
+gcloud app deploy
+```
+
 
 ## デプロイせずにテストurlを作成するコマンド
 
@@ -43,6 +48,10 @@ npm run dev
 gcloud app deploy --no-promote
 ```
 
+## ブラウザを起動
+```
+gcloud app browse
+```
 
 ## -作業の様子-
 
