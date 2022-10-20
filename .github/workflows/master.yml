@@ -6,6 +6,7 @@ on:
     types:
       - opened
 
+
 jobs:
   deplay-staging:
     name: GAE deplay
