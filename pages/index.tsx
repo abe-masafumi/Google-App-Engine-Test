@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          actions test to <a href="https://nextjs.org">Next.js!</a>
+          actions test promote to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
         <p className={styles.description}>

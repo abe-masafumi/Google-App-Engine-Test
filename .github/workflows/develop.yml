@@ -2,23 +2,29 @@ name: make_develop
 on: 
   pull_request:
     branches: 
-      - 'develop'
-    types:
-      - opened
+      - develop
 
 jobs:
-  job_id:
+  deplay-staging:
+    name: GAE deplay
+    runs-on: ubuntu-latest
     steps:
-    - id: 'deploy'
-      uses: 'google-github-actions/deploy-appengine@v0'
-    - name: 'Setup Cloud SDK'
-      uses: 'google-github-actions/setup-gcloud@v0'
-      with:
-        project_id: '${{ env.GCP_PROJECT_ID }}'
-        service_account_key: '${{ secrets.GCP_SA_KEY }}'
+      - uses: actions/checkout@v2
 
-    - name: 'Deploy to App Engine'
-      run: 'gcloud app deploy app.yaml --quiet --no-promote --version v1'
+      - name: install
+        run: yarn install
+      - name: Build
+        run: yarn build
 
-    - id: 'test'
-      run: 'curl "${{ steps.deploy.outputs.url }}"'
+      - name: Deploy an App Engine app
+        id: deploy-app
+        uses: google-github-actions/deploy-appengine@v0.3.1
+        with:
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          deliverables: app.yaml
+          promote: false
+          credentials: ${{ secrets.GCP_SA_KEY }}
+          version: v1
+
+      - id: 'test'
+        run: 'curl "${{ steps.deploy.outputs.url }}"'
