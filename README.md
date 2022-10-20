@@ -211,3 +211,15 @@ ERROR: (gcloud.app.deploy) INVALID_ARGUMENT: Instance class (F1) is only allowed
 確認ブランチ：develop
 
 デフォルトブランチ：main
+
+## github actions 設定
+
+[GitHub Actions でプルリクのマージでワークフローを実行する](https://qiita.com/okazy/items/7ab46f2c20ec341a2836)
+
+[GitHub google-github-actions/deploy-appengine](https://github.com/google-github-actions/deploy-appengine)
+
+[GitHub ワークフローをトリガーするイベント](https://docs.github.com/ja/actions/using-workflows/events-that-trigger-workflows)
+
+[GitHub アクションのワークフロー構文](https://docs.github.com/ja/actions/using-workflows/workflow-syntax-for-github-actions#onpushpull_requestpull_request_targetpathspaths-ignore)
+
+[GitHub アクションについて](https://docs.github.com/ja/actions/learn-github-actions/understanding-github-actions)

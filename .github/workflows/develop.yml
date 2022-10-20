@@ -1,4 +1,4 @@
-name: make_test
+name: make test URL
 on: 
   pull_request:
     branches: 
@@ -17,7 +17,7 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Deploy an App Engine app
+      - name: auth
         id: 'auth'
         uses: 'google-github-actions/auth@v0'
         with:
