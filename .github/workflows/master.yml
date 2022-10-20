@@ -1,11 +1,10 @@
-name: ci
+name: make_main
 on:
   pull_request:
     branches: 
       - 'main'
     types:
       - opened
-
 
 jobs:
   deplay-staging:
