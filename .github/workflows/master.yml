@@ -17,8 +17,6 @@ jobs:
         run: yarn install
       - name: Build
         run: yarn build
-      - name: test_url
-        run: gcloud app deploy --no-promote
 
       - name: Deploy an App Engine app
         id: deploy-app
