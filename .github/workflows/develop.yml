@@ -3,6 +3,7 @@ on:
   pull_request:
     branches: 
       - develop
+    types: [opened, synchronize]
 
 jobs:
   deplay-staging:
@@ -23,8 +24,3 @@ jobs:
 
       - name: 'Deploy to App Engine'
         run: gcloud app deploy --no-promote
-        # uses: 'google-github-actions/deploy-appengine@v0'
-        # with:
-        #   deliverables: 'app.yaml'
-        #   promote: true
-        #   version: 'v1'
