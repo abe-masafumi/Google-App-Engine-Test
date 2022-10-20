@@ -17,11 +17,14 @@ jobs:
         run: yarn build
 
       - name: Deploy an App Engine app
-        id: deploy-app
-        uses: google-github-actions/deploy-appengine@v0.3.1
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v0'
         with:
-          project_id: ${{ secrets.GCP_PROJECT_ID }}
-          deliverables: app.yaml
-          promote: true
-          credentials: ${{ secrets.GCP_SA_KEY }}
-          version: v1
+          credentials_json: '${{ secrets.GCP_SA_KEY }}'
+
+      - name: 'Deploy to App Engine'
+        uses: 'google-github-actions/deploy-appengine@v0'
+        with:
+          deliverables: 'app.yaml'
+          promote: false
+          version: 'v1'

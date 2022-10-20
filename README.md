@@ -41,6 +41,10 @@ npm run dev
 gcloud app deploy
 ```
 
+デプロイURL
+
+https://gcloud-test-365910.dt.r.appspot.com/
+
 
 ## デプロイせずにテストurlを作成するコマンド
 
