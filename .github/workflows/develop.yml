@@ -5,7 +5,7 @@ on:
     branches: 
       - 'develop'
     types:
-      - opened
+      - [opened, reopened]
 
 jobs:
   deplay-staging:
