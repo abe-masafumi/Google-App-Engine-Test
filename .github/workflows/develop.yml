@@ -2,7 +2,8 @@ name: make_develop
 on: 
   pull_request:
     types:
-       [opened, edited]
+       - opened
+       - deleted
     branches: 
       - develop
 
