@@ -1,11 +1,10 @@
-
 name: make_develop
 on: 
   pull_request:
     types:
-      - [opened, edited]
+      - [opened, reopened]
     branches: 
-      - 'develop'
+      - develop
 
 jobs:
   deplay-staging:
