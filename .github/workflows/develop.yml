@@ -22,7 +22,7 @@ jobs:
         with:
           project_id: ${{ secrets.GCP_PROJECT_ID }}
           deliverables: app.yaml
-          promote: false
+          promote: true
           credentials: ${{ secrets.GCP_SA_KEY }}
           version: v1
 
