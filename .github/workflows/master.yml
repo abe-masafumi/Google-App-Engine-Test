@@ -1,7 +1,10 @@
 name: ci
-on: pull_request
-  branches: 
-   - 'develop'
+on:
+  pull_request:
+    branches: 
+      - 'main'
+    types:
+      - opened
 
 jobs:
   deplay-staging:
@@ -17,11 +20,11 @@ jobs:
       - name: test_url
         run: gcloud app deploy --no-promote
 
-      # - name: Deploy an App Engine app
-      #   id: deploy-app
-      #   uses: google-github-actions/deploy-appengine@v0.3.1
-      #   with:
-      #     project_id: ${{ secrets.GCP_PROJECT_ID }}
-      #     deliverables: app.yaml
-      #     credentials: ${{ secrets.GCP_SA_KEY }}
-      #     version: v1
+      - name: Deploy an App Engine app
+        id: deploy-app
+        uses: google-github-actions/deploy-appengine@v0.3.1
+        with:
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          deliverables: app.yaml
+          credentials: ${{ secrets.GCP_SA_KEY }}
+          version: v1
