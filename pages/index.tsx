@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          synchronize to <a href="https://nextjs.org">Next.js!</a>
+          synchronize edit to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
         <p className={styles.description}>
