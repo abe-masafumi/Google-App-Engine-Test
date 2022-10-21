@@ -214,6 +214,10 @@ ERROR: (gcloud.app.deploy) INVALID_ARGUMENT: Instance class (F1) is only allowed
 
 ## github actions 設定
 
+[GitHub Actions で GAE に自動デプロイ](https://curucuru.co.jp/blog/20220922-github-actions-cd)
+
+[【GAE】githubへのpushをトリガーに自動デプロイを実行する](https://scrapbox.io/blockbase/%E3%80%90GAE%E3%80%91github%E3%81%B8%E3%81%AEpush%E3%82%92%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%E3%81%AB%E8%87%AA%E5%8B%95%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B)
+
 [GitHub Actions でプルリクのマージでワークフローを実行する](https://qiita.com/okazy/items/7ab46f2c20ec341a2836)
 
 [GitHub google-github-actions/deploy-appengine](https://github.com/google-github-actions/deploy-appengine)
