@@ -227,3 +227,16 @@ ERROR: (gcloud.app.deploy) INVALID_ARGUMENT: Instance class (F1) is only allowed
 [GitHub アクションのワークフロー構文](https://docs.github.com/ja/actions/using-workflows/workflow-syntax-for-github-actions#onpushpull_requestpull_request_targetpathspaths-ignore)
 
 [GitHub アクションについて](https://docs.github.com/ja/actions/learn-github-actions/understanding-github-actions)
+
+## GEA接続プロジェクトの切り替え
+
+[Google Cloudデータセンターはどこにありますか？](https://kinsta.com/jp/knowledgebase/google-cloud-data-center-locations/)
+
+[gcloudコマンドのアカウントやプロジェクトを切り替える方法](https://qiita.com/hnw/items/1e8ba8b6f64214205d89)
+
+
+## GEAカスタムドメインの接続
+
+[Google App Engine との統合](https://support.google.com/domains/answer/6009957?hl=ja&ref_topic=9142939)
+
+[GAEへのカスタムドメインとロードバランサ](https://recruit.gmo.jp/engineer/jisedai/blog/gae-domain-loadbalancer/)
