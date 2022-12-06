@@ -25,3 +25,9 @@ jobs:
 
       - name: 'Deploy to App Engine for Test URL'
         run: gcloud app deploy --no-promote
+
+      - name: comment-pr
+        uses: JoseThen/comment-pr@v1.1.1
+        with:
+          comment: 'Preview ${{ steps.deploy-to-webapp.outputs.webapp-url }}'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
