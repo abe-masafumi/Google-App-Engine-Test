@@ -24,6 +24,7 @@ jobs:
           credentials_json: '${{ secrets.GCP_SA_KEY }}'
 
       - name: 'Deploy to App Engine for Test URL'
+        id: deploy-to-webapp
         run: gcloud app deploy --no-promote
 
       - name: comment-pr
