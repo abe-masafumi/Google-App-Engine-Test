@@ -30,5 +30,5 @@ jobs:
       - name: comment-pr
         uses: JoseThen/comment-pr@v1.1.1
         with:
-          comment: 'Preview ${{ steps }}'
+          comment: 'Preview ${{ steps.deploy-to-webapp.outputs }}'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
